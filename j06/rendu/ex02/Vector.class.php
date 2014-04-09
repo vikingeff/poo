@@ -1,26 +1,18 @@
 <?php
 require_once 'Color.class.php';
 
-Class Vertex {
+Class Vector {
 
 	private $_x = 0;
 	private $_y = 0;
 	private $_z = 0;
 	private $_w = 0;
-	private $_color;
 	static $verbose = False;
 
 	public function getX() { return $this->_x; }
 	public function getY() { return $this->_y; }
 	public function getZ() { return $this->_z; }
 	public function getW() { return $this->_w; }
-	public function getColor() { return $this->_color; }
-
-	public function setX( $x ) { $this->_x = $x; return; }
-	public function setY( $y ) { $this->_y = $y; return; }
-	public function setZ( $z ) { $this->_z = $z; return; }
-	public function setW( $w ) { $this->_w = $w; return; }
-	public function setColor ( $color ) { $this->_color = $color; return; }
 
 	public function __construct(array $kwargs){
 		if (array_key_exists('x', $kwargs) && array_key_exists('y', $kwargs) && array_key_exists('z', $kwargs))
@@ -61,8 +53,44 @@ Class Vertex {
 		return $str;
 	}
 
+	public function magnitude(){
+
+	}
+
+	public function normalize(){
+
+	}
+
+	public function add( Vector $rhs ){
+
+	}
+
+	public function sub( Vector $rhs ){
+
+	}
+
+	public function opposite(){
+
+	}
+
+	public function scalarProduct ( $k ){
+
+	}
+
+	public function dotProduct( Vector $rhs ){
+
+	}
+
+	public function cos( Vector $rhs ){
+
+	}
+
+	public function crossProduct( Vector $rhs ){
+
+	}
+
 	static public function doc(){
-		echo file_get_contents( "Vertex.doc.txt" );
+		echo file_get_contents( "Vector.doc.txt" );
 		return;
 	}
 }

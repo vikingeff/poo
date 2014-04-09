@@ -42,7 +42,7 @@ Class Color {
 	}
 
 	public function __toString(){
-		$str = "Color ( red: ".$this->red.", green: ".$this->green.", blue: ".$this->blue.")";
+		$str = "Color( red: ".$this->red.", green: ".$this->green.", blue: ".$this->blue.")";
 		return $str;
 	}
 
